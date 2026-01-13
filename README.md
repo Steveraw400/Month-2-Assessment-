@@ -66,8 +66,8 @@ docker-compose up --build
 ```
 ## Services started
 
-. Backend API → http://localhost:8080
-. MongoDB → localhost:27017
+1. Backend API → http://localhost:8080
+2. MongoDB → localhost:27017
 
    
 
