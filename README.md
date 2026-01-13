@@ -76,6 +76,12 @@ docker-compose up --build
 ```text
  kind create cluster --name muchtodo
 ```
+## Verify:
+```text
+kubectl get nodes
+```
+
+
 
    
 
