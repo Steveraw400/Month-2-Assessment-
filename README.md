@@ -56,6 +56,14 @@ DockerMuchtodo-App/
 
 5. Git
 
-6. VS Code (recommended
+6. VS Code (recommended)
+
+ #  Local Development with Docker Compose 🐳
+
+ ```text
+docker-compose up --build
+```
+
+   
 
 
