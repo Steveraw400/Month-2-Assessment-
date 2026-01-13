@@ -1,7 +1,7 @@
-MuchTodo – Containerized Backend with Docker & Kubernetes (Kind)
+## MuchTodo – Containerized Backend with Docker & Kubernetes (Kind)
 📌 Overview
 
-MuchTodo is a Golang-based backend API that connects to a MongoDB database.
+# MuchTodo is a Golang-based backend API that connects to a MongoDB database.
 This project modernizes the deployment of the MuchTodo backend by:
 
 1. Containerizing the application using Docker
