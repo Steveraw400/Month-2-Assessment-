@@ -16,7 +16,7 @@ This project modernizes the deployment of the MuchTodo backend by:
 
 6. Exposing the backend via Kubernetes Services and Ingress
 
-🏗️ ## Project Structure
+🏗️ ##Project Structure
 
 ```text
 DockerMuchtodo-App/
@@ -44,7 +44,7 @@ DockerMuchtodo-App/
 └── README.md
 ```
 
-🧰 ## Prerequisites
+🧰 ##Prerequisites
 
 1. Ensure the following tools are installed:
 
