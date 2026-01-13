@@ -43,3 +43,18 @@ DockerMuchtodo-App/
 ├── Makefile
 └── README.md
 
+🧰 ## Prerequisites
+
+1. Ensure the following tools are installed:
+
+2. Docker Desktop (with Kubernetes disabled – Kind is used instead)
+
+3. kubectl
+
+4. kind
+
+5. Git
+
+6. VS Code (recommended
+
+
