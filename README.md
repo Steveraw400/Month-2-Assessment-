@@ -16,31 +16,30 @@ This project modernizes the deployment of the MuchTodo backend by:
 
 6. Exposing the backend via Kubernetes Services and Ingress
 
-🏗️ Project Structure
+🏗️ ## Project Structure
 
-
-.
-├── <application-code>
-├── Dockerfile
-├── docker-compose.yml
-├── .dockerignore
+```text
+DockerMuchtodo-App/
+├── backend/
+│   ├── cmd/
+│   ├── internal/
+│   ├── Dockerfile
+│   └── go.mod
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── Dockerfile
 ├── kubernetes/
 │   ├── namespace.yaml
-│   ├── mongodb/
-│   │   ├── mongodb-secret.yaml
-│   │   ├── mongodb-configmap.yaml
-│   │   ├── mongodb-pvc.yaml
-│   │   ├── mongodb-deployment.yaml
-│   │   └── mongodb-service.yaml
-│   ├── backend/
-│   │   ├── backend-secret.yaml
-│   │   ├── backend-configmap.yaml
-│   │   ├── backend-deployment.yaml
-│   │   └── backend-service.yaml
+│   ├── mongodb-deployment.yaml
+│   ├── mongodb-service.yaml
+│   ├── backend-deployment.yaml
+│   ├── backend-service.yaml
 │   └── ingress.yaml
 ├── scripts/
 │   ├── docker-build.sh
-│   ├── docker-run.sh
-│   ├── k8s-deploy.sh
-│   └── k8s-cleanup.sh
+│   └── kind-load.sh
+├── .env.example
+├── Makefile
 └── README.md
+
