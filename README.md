@@ -59,7 +59,8 @@ DockerMuchtodo-App/
 6. VS Code (recommended)
 
  #  Local Development with Docker Compose 🐳
-
+ 
+Build and run locally
  ```text
 docker-compose up --build
 ```
