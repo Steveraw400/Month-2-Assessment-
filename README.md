@@ -64,6 +64,10 @@ Build and run locally
  ```text
 docker-compose up --build
 ```
+## Services started
+
+. Backend API → http://localhost:8080
+. MongoDB → localhost:27017
 
    
 
