@@ -42,6 +42,7 @@ DockerMuchtodo-App/
 ├── .env.example
 ├── Makefile
 └── README.md
+```
 
 🧰 ## Prerequisites
 
