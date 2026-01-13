@@ -80,9 +80,37 @@ docker-compose up --build
 ```text
 kubectl get nodes
 ```
+## Build and load backend image into Kind
 
+```text
+docker build -t muchtodo-muchtodo-api:latest .
+kind load docker-image muchtodo-muchtodo-api:latest --name muchtodo
+```
+## Deploy Kubernetes resources
 
+```text
+kubectl apply -f kubernetes/namespace.yaml
+kubectl apply -f kubernetes/mongodb/
+kubectl apply -f kubernetes/backend/
+kubectl apply -f kubernetes/ingress.yaml
+```
+## Verify deployment
+```text
+kubectl get pods -n muchtodo
+```
+## Expected:
 
-   
+```text
+mongodb-xxxxx            1/1 Running
+muchtodo-backend-xxxxx   1/1 Running
+```
+# Health Checks
+### The backend exposes a health endpoint:
+   ```text
+GET /health
+```
+This endpoint is used by Kubernetes readiness probes to determine pod availability.
+
+# Accessing the Application 🌐
 
 
