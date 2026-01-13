@@ -113,4 +113,71 @@ This endpoint is used by Kubernetes readiness probes to determine pod availabili
 
 # Accessing the Application 🌐
 
+### Option 1: NodePort
+```text
+kubectl get svc -n muchtodo
+```
+### Access via:
+```text
+http://localhost:<NODE_PORT>
+```
+### Option 2: Ingress (recommended)
+### Add to your hosts file:
+```text
+127.0.0.1 muchtodo.local
+```
+### Access:
+```text
+http://muchtodo.local
+```
+ # Configuration & Secrets 🔐
+
+1. Secrets are stored using Kubernetes Secret objects
+
+2. Configuration values are managed via ConfigMap
+
+3. MongoDB credentials are injected securely into pods
+
+# Troubleshooting 🧪 
+
+### View pod logs
+
+```text
+kubectl logs -n muchtodo <pod-name>
+```
+### Describe pod events
+
+```text
+kubectl describe pod <pod-name> -n muchtodo
+```
+# Cleanup 🧹
+### Delete Kubernetes resources:
+
+```text
+kubectl delete namespace muchtodo
+```
+## Delete Kind cluster:
+```text
+kind delete cluster --name muchtodo
+```
+ # Summary 🏁
+
+1. This project demonstrates:
+
+2. Containerization of a Golang backend
+
+3. Local development using Docker Compose
+
+4. Kubernetes deployment using Kind
+
+5. Proper use of Kubernetes Secrets, ConfigMaps, and PVCs
+
+6. Debugging of real-world Kubernetes issues (CrashLoopBackOff, ImagePullBackOff, readiness probes)
+
+
+
+
+
+
+
 
