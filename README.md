@@ -15,3 +15,31 @@ This project modernizes the deployment of the MuchTodo backend by:
 5. Persisting MongoDB data using PersistentVolumeClaims
 
 6. Exposing the backend via Kubernetes Services and Ingress
+
+🏗️ Project Structure
+
+.
+├── <application-code>
+├── Dockerfile
+├── docker-compose.yml
+├── .dockerignore
+├── kubernetes/
+│   ├── namespace.yaml
+│   ├── mongodb/
+│   │   ├── mongodb-secret.yaml
+│   │   ├── mongodb-configmap.yaml
+│   │   ├── mongodb-pvc.yaml
+│   │   ├── mongodb-deployment.yaml
+│   │   └── mongodb-service.yaml
+│   ├── backend/
+│   │   ├── backend-secret.yaml
+│   │   ├── backend-configmap.yaml
+│   │   ├── backend-deployment.yaml
+│   │   └── backend-service.yaml
+│   └── ingress.yaml
+├── scripts/
+│   ├── docker-build.sh
+│   ├── docker-run.sh
+│   ├── k8s-deploy.sh
+│   └── k8s-cleanup.sh
+└── README.md
